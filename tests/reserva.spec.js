@@ -85,7 +85,7 @@ test('cadastro de reserva', async ({ request }) => {
 
 });
 
-test('Gerar token', async ({ request }) => {
+test('Gerar token @auth', async ({ request }) => {
 
   const response = await request.post('/auth',{
     data:{
@@ -98,7 +98,7 @@ test('Gerar token', async ({ request }) => {
 
     const authResponse = await response.json();
     tokenRecebido = authResponse.token;
-    console.log('Token gerado:', token);
+    console.log('Token gerado:', tokenRecebido);
 });
 
 
