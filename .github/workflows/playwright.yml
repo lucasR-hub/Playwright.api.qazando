@@ -1,4 +1,4 @@
-name: Playwright Tests booking
+name: Playwright Tests 
 on:
   push:
     branches: [ main, master ]
@@ -17,8 +17,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests booking
-      run: npx playwright test booking --grep @token
+    - name: Run Playwright tests
+      run: npx playwright test --grep @token
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
